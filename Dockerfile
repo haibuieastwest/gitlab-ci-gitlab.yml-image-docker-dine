@@ -22,6 +22,9 @@ RUN bash install_nvm.sh
 RUN chmod +x $HOME/.nvm/nvm.sh
 RUN $HOME/.nvm/nvm.sh install 8.11.1
 RUN apt-get install -y npm
+# upgrade nodejs
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get install -y nodejs
 # upgrade npm
 RUN npm install -g npm@latest
 # show nodejs version
