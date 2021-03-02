@@ -8,8 +8,10 @@ Override gitlab.yml image. This image already set up docker-compose and fully ub
 ```
 
 # deploy to docker hub
+Run command line as administrator
 
 ```bash
+  docker login --username=haibuieastwest
   docker tag ubuntu-docker-compose haibuieastwest/ubuntu-docker-compose:latest
   docker push haibuieastwest/ubuntu-docker-compose:latest
 ```
